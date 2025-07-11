@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="ATMDataSet1" targetNamespace="http://tempuri.org/ATMDataSet1.xsd" xmlns:mstns="http://tempuri.org/ATMDataSet1.xsd" xmlns="http://tempuri.org/ATMDataSet1.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="ATMConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="ATMConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.ATM.Properties.Settings.GlobalReference.Default.ATMConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="ViewDepositTableAdapter" GeneratorDataComponentClassName="ViewDepositTableAdapter" Name="ViewDeposit" UserDataComponentName="ViewDepositTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="ATMConnectionString (Settings)" DbObjectName="ATM.dbo.ViewDeposit" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT id, [From], [To], Amount, Date FROM dbo.ViewDeposit</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="id" DataSetColumn="id" />
+              <Mapping SourceColumn="From" DataSetColumn="From" />
+              <Mapping SourceColumn="To" DataSetColumn="To" />
+              <Mapping SourceColumn="Amount" DataSetColumn="Amount" />
+              <Mapping SourceColumn="Date" DataSetColumn="Date" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="ATMDataSet1" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_UserDSName="ATMDataSet1" msprop:Generator_DataSetName="ATMDataSet1">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="ViewDeposit" msprop:Generator_RowEvHandlerName="ViewDepositRowChangeEventHandler" msprop:Generator_RowDeletedName="ViewDepositRowDeleted" msprop:Generator_RowDeletingName="ViewDepositRowDeleting" msprop:Generator_RowEvArgName="ViewDepositRowChangeEvent" msprop:Generator_TablePropName="ViewDeposit" msprop:Generator_RowChangedName="ViewDepositRowChanged" msprop:Generator_RowChangingName="ViewDepositRowChanging" msprop:Generator_TableClassName="ViewDepositDataTable" msprop:Generator_RowClassName="ViewDepositRow" msprop:Generator_TableVarName="tableViewDeposit" msprop:Generator_UserTableName="ViewDeposit">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="id" msprop:Generator_ColumnPropNameInRow="id" msprop:Generator_ColumnPropNameInTable="idColumn" msprop:Generator_ColumnVarNameInTable="columnid" msprop:Generator_UserColumnName="id" type="xs:int" />
+              <xs:element name="From" msprop:Generator_ColumnPropNameInRow="From" msprop:Generator_ColumnPropNameInTable="FromColumn" msprop:Generator_ColumnVarNameInTable="columnFrom" msprop:Generator_UserColumnName="From">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="To" msprop:Generator_ColumnPropNameInRow="To" msprop:Generator_ColumnPropNameInTable="ToColumn" msprop:Generator_ColumnVarNameInTable="columnTo" msprop:Generator_UserColumnName="To">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Amount" msprop:Generator_ColumnPropNameInRow="Amount" msprop:Generator_ColumnPropNameInTable="AmountColumn" msprop:Generator_ColumnVarNameInTable="columnAmount" msprop:Generator_UserColumnName="Amount" type="xs:int" />
+              <xs:element name="Date" msprop:Generator_ColumnPropNameInRow="Date" msprop:Generator_ColumnPropNameInTable="DateColumn" msprop:Generator_ColumnVarNameInTable="columnDate" msprop:Generator_UserColumnName="Date" type="xs:dateTime" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:ViewDeposit" />
+      <xs:field xpath="mstns:id" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>
